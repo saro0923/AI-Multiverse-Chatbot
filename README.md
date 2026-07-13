@@ -1,22 +1,44 @@
 # 🌌 AI Multiverse Chatbot
 
-An interactive AI chatbot built with Streamlit and Google Gemini AI that allows users to chat with multiple AI personalities such as Teacher, Programmer, Motivator, Comedian, and AI Engineer.
+An interactive AI chatbot built with Streamlit and Google Gemini AI that allows users to chat with multiple AI personalities while maintaining conversation memory using Streamlit Session State.
 
 ## 🚀 Features
 
-- 🤖 Multiple AI Personalities
-  - Teacher
-  - Programmer
-  - Motivator
-  - Comedian
-  - AI Engineer
+### 🤖 Multiple AI Personalities
 
-- 💬 Interactive Chat Interface
-- 🧠 Powered by Google Gemini AI
-- 📝 Chat History Support
-- 🗑️ Clear Chat Option
-- 🎨 User-Friendly Streamlit UI
-- 🔒 Secure API Key Management using `.env`
+- Teacher
+- Programmer
+- Motivator
+- Comedian
+- AI Engineer
+
+### 💬 Chat Features
+
+- Interactive Chat Interface
+- Streamlit Native Chat UI (`st.chat_input`)
+- Conversation Memory Vault (`st.session_state`)
+- Persistent Chat History During Session
+- Save Chat Feature
+- Load Previously Saved Chats
+- New Chat Option
+- Clear Current Chat
+
+### 🧠 AI Powered
+
+- Powered by Google Gemini AI
+- Context-Aware Conversations
+- Real-Time AI Responses
+
+### 🎨 User Experience
+
+- Clean Streamlit Interface
+- Sidebar Controls
+- Chat History Viewer
+- Personality Switching Without Losing History
+
+### 🔒 Security
+
+- Secure API Key Management using `.env`
 
 ---
 
@@ -36,10 +58,12 @@ AI_Multiverse_Chatbot/
 │
 ├── app.py
 ├── requirements.txt
-├── .gitignore
 ├── README.md
+├── .gitignore
 └── .env
 ```
+
+---
 
 ## ⚙️ Installation
 
@@ -106,20 +130,41 @@ http://localhost:8501
 
 ---
 
-## 📸 Screenshots
+## 🧠 Memory Vault (Assignment 3)
 
-### Home Page
+This project uses Streamlit Session State to maintain conversation history.
 
-- Select AI Personality
-- Enter your question
-- Receive AI-generated responses
+```python
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+```
 
-### Features
+Features:
 
-- Multiple AI Personas
-- Real-time AI Responses
-- Chat History
-- Clear Chat Functionality
+- Stores User Messages
+- Stores AI Responses
+- Maintains Chat History Across Reruns
+- Preserves History While Changing Personalities
+- Displays Previous Messages Automatically
+
+---
+
+## 📸 Application Features
+
+### Sidebar
+
+- Personality Selector
+- New Chat
+- Save Chat
+- Saved Chats
+- Memory Vault Viewer
+- Clear Current Chat
+
+### Chat Area
+
+- User Messages
+- AI Responses
+- Conversation History
 
 ---
 
@@ -127,9 +172,21 @@ http://localhost:8501
 
 - Learning and Education
 - Programming Assistance
+- AI & Machine Learning Guidance
 - Career Guidance
 - Motivation and Productivity
 - Entertainment and Fun Conversations
+
+---
+
+## 🔮 Future Enhancements
+
+- Voice Input Support
+- Chat Export to PDF
+- Database Storage for Chats
+- Dark Mode
+- Multi-language Support
+- User Authentication
 
 ---
 
@@ -137,22 +194,11 @@ http://localhost:8501
 
 **Saravanan S**
 
-- GitHub: https://github.com/saro0923
-- LinkedIn: www.linkedin.com/in/saravanan-s-909865286
-
----
-
-## ⭐ Future Enhancements
-
-- Voice Input Support
-- Chat Export to PDF
-- Additional AI Personalities
-- Dark Mode
-- Multi-language Support
-- Conversation Memory
+LinkedIn:
+https://www.linkedin.com/in/saravanan2311/
 
 ---
 
 ## 📄 License
 
-This project is developed for educational and learning purposes.
+This project was developed as part of the MirAI School of Technology – Virtual Summer Internship 2026 and is intended for educational and learning purposes.
